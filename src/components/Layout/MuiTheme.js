@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // material-ui
 import { ThemeProvider } from '@material-ui/styles'
@@ -14,6 +15,10 @@ const MuiTheme = ({ children }) => {
       {children}
     </ThemeProvider>
   )
+}
+
+MuiTheme.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default MuiTheme

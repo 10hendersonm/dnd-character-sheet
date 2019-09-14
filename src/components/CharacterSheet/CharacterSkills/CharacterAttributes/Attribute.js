@@ -29,7 +29,9 @@ const Attribute = ({ name, value }) => {
       <Typography className={classes.name} variant="caption">
         {name}
       </Typography>
-      <Typography data-testid="attribute-value" className={classes.value}>{value}</Typography>
+      <Typography data-testid="attribute-value" className={classes.value}>
+        {value}
+      </Typography>
       <Typography className={classes.modifier}>
         {(modifier > 0 && '+') + modifier}
       </Typography>

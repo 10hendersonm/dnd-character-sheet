@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const CharacterName = props => {
+const CharacterName = () => {
   const classes = useStyles()
   return (
     <div data-testid="CharacterName" className={classes.root}>

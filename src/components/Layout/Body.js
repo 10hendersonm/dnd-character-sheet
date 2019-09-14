@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // material-ui
 import { makeStyles } from '@material-ui/styles'
@@ -25,6 +26,10 @@ const Body = ({ children }) => {
       {children}
     </div>
   )
+}
+
+Body.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Body

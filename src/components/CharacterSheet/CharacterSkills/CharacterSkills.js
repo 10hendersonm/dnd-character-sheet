@@ -4,7 +4,7 @@ import CharacterAttributes from './CharacterAttributes/CharacterAttributes'
 
 import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((/*theme*/) => ({
   skillsRoot: {
     display: 'flex',
     flexDirection: 'row',
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const CharacterSkills = props => {
+const CharacterSkills = () => {
   const classes = useStyles()
   return (
     <SheetColumn>

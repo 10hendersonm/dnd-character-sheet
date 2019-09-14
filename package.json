@@ -13,12 +13,19 @@
     "react-scripts": "^3.1.1"
   },
   "devDependencies": {
-    "@testing-library/react": "^9.1.4"
+    "@testing-library/react": "^9.1.4",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint src"
   },
   "browserslist": {
     "production": [

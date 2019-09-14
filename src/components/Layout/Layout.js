@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // custom
 import Body from './Body'
@@ -13,5 +14,9 @@ const Layout = ({ children }) => (
     </Body>
   </MuiTheme>
 )
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Layout

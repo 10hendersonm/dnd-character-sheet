@@ -3,13 +3,6 @@ import { render } from 'test-utils'
 import '@testing-library/jest-dom/extend-expect'
 import Attribute from '../Attribute'
 
-const baseConsoleError = global.console.error
-
-const isPropTypeFailure = (...args) => {
-  const propTypeFailures = [/Failed prop type/, /Warning: Received/]
-  return propTypeFailures.some(p => p.test(args[0]))
-}
-
 describe('<Attribute />', () => {
   it('renders', () => {
     render(<Attribute name="Strength" value={10} />)

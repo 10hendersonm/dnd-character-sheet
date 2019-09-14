@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((/*theme*/) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -13,7 +14,15 @@ const useStyles = makeStyles(theme => ({
 
 const SheetColumn = ({ children }) => {
   const classes = useStyles()
-  return <div data-testid="SheetColumn" className={classes.root}>{children}</div>
+  return (
+    <div data-testid="SheetColumn" className={classes.root}>
+      {children}
+    </div>
+  )
+}
+
+SheetColumn.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default SheetColumn

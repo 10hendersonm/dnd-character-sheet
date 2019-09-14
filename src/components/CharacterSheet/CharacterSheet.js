@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const CharacterSheet = props => {
+const CharacterSheet = () => {
   const classes = useStyles()
   return (
     <Paper className={classes.root}>

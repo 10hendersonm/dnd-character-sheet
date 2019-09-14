@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const CharacterMetadata = props => {
+const CharacterMetadata = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>

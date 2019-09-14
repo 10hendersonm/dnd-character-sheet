@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import { TextField } from '@material-ui/core'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((/*theme*/) => ({
   root: {
     flexBasis: '33%',
     display: 'flex',

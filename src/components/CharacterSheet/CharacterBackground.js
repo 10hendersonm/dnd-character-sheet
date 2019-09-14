@@ -1,7 +1,7 @@
 import React from 'react'
 import SheetColumn from './SheetColumn'
 
-const CharacterBackground = props => {
+const CharacterBackground = () => {
   return <SheetColumn>Stuff</SheetColumn>
 }
 
