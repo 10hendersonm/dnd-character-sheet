@@ -18,21 +18,20 @@ describe('<CharacterSkills />', () => {
     expect(getByTestId('CharacterAttributes')).toBeInTheDocument()
   })
 
-  // TODO uncomment these
-  // it('provides <Inspiration />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('Inspiration')).toBeInTheDocument()
-  // })
+  it('provides <Inspiration />', () => {
+    const { getByTestId } = render(<CharacterSkills />)
+    expect(getByTestId('Inspiration')).toBeInTheDocument()
+  })
 
-  // it('provides <ProficiencyBonus />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('ProficiencyBonus')).toBeInTheDocument()
-  // })
+  it('provides <ProficiencyBonus />', () => {
+    const { getByTestId } = render(<CharacterSkills />)
+    expect(getByTestId('ProficiencyBonus')).toBeInTheDocument()
+  })
 
-  // it('provides <SavingThrows />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('SavingThrows')).toBeInTheDocument()
-  // })
+  it('provides <SavingThrows />', () => {
+    const { baseElement } = render(<CharacterSkills />)
+    expect(baseElement).toHaveTextContent('Saving Throws')
+  })
 
   // it('provides <Skills />', () => {
   //   const { getByTestId } = render(<CharacterSkills />)

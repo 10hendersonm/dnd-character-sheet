@@ -37,6 +37,11 @@ describe('<MuiTheme />', () => {
         <ChildComponent />
       </MuiTheme>
     )
-    expect(getByTestId(childTestId)).toBeInTheDocument()
+    expect(getByTestId(childTestId)).toHaveStyle('background-color: #074')
+  })
+
+  it('invokes <CssBaseline />', () => {
+    render(<MuiTheme />)
+    expect(document.body).toHaveStyle('color: rgba(0, 0, 0, 0.87)')
   })
 })

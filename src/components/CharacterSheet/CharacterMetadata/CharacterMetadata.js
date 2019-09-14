@@ -36,12 +36,12 @@ const CharacterMetadata = () => {
       <CharacterName />
       <div className={classes.detailBorder}>
         <div className={classes.detailRoot}>
-          <CharacterDetail type="Class &amp; Level" />
-          <CharacterDetail type="Background" />
-          <CharacterDetail type="Player Name" />
-          <CharacterDetail type="Race" />
-          <CharacterDetail type="Alignment" />
-          <CharacterDetail type="Experience Points" />
+          <CharacterDetail type="Class &amp; Level" value="Druid - 1" />
+          <CharacterDetail type="Background" value="Folk Hero" />
+          <CharacterDetail type="Player Name" value="Marty" />
+          <CharacterDetail type="Race" value="Dark Elf" bottomRow />
+          <CharacterDetail type="Alignment" value="Neutral" bottomRow />
+          <CharacterDetail type="Experience Points" value="9001" bottomRow />
         </div>
       </div>
     </div>

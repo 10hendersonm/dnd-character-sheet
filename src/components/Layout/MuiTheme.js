@@ -8,6 +8,8 @@ import { CssBaseline } from '@material-ui/core'
 // custom
 import theme from '../../config/theme'
 
+// console.log(theme)
+
 const MuiTheme = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>

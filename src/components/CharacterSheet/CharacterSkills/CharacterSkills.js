@@ -1,8 +1,15 @@
 import React from 'react'
+
+// material-ui
+import { makeStyles } from '@material-ui/styles'
+
+// custom
 import SheetColumn from '../SheetColumn'
 import CharacterAttributes from './CharacterAttributes/CharacterAttributes'
-
-import { makeStyles } from '@material-ui/styles'
+import Inspiration from './Inspiration'
+import ProficiencyBonus from './ProficiencyBonus'
+import SavingThrows from './SavingThrows/SavingThrows'
+import Skills from './Skills'
 
 const useStyles = makeStyles((/*theme*/) => ({
   skillsRoot: {
@@ -19,10 +26,10 @@ const CharacterSkills = () => {
       <div className={classes.skillsRoot}>
         <CharacterAttributes />
         <div className={classes.proficiencies}>
-          {/* <Inspiration /> */}
-          {/* <ProficiencyBonus /> */}
-          {/* <SavingThrows /> */}
-          {/* <Skills /> */}
+          <Inspiration value={true} />
+          <ProficiencyBonus value={2} />
+          <SavingThrows />
+          <Skills />
         </div>
         {/* <PassivePerception /> */}
         {/* <OtherProficiencies /> */}
