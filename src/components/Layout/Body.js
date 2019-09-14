@@ -20,7 +20,11 @@ const useStyles = makeStyles(theme => ({
 
 const Body = ({ children }) => {
   const classes = useStyles()
-  return <div className={classes.root}>{children}</div>
+  return (
+    <div data-testid="body" className={classes.root}>
+      {children}
+    </div>
+  )
 }
 
 export default Body

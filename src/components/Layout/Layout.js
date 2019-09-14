@@ -1,22 +1,17 @@
 import React from 'react'
 
-// material-ui
-import { CssBaseline } from '@material-ui/core'
-import { ThemeProvider } from '@material-ui/styles'
-
 // custom
-import theme from '../../config/theme'
 import Body from './Body'
 import Header from './Header'
+import MuiTheme from './MuiTheme'
 
 const Layout = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
+  <MuiTheme>
     <Body>
       <Header title="Character Sheet" />
       {children}
     </Body>
-  </ThemeProvider>
+  </MuiTheme>
 )
 
 export default Layout

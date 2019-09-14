@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // material-ui
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
@@ -13,9 +13,12 @@ const useStyles = makeStyles(theme => ({
 
 const Header = ({ title }) => {
   const classes = useStyles()
+  useEffect(() => {
+    document.title = title
+  }, [title])
   return (
     <>
-      <AppBar>
+      <AppBar data-testid="header">
         <Toolbar>
           <Typography variant="h6" color="inherit">
             {title}
