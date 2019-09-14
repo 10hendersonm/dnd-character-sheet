@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'test-utils'
+import { render } from 'utils/test-utils'
 import '@testing-library/jest-dom/extend-expect'
 import Header from '../Header'
 
@@ -9,17 +9,17 @@ describe('<Header />', () => {
   })
 
   it('renders', () => {
-    render(<Header />)
+    render(<Header title="Hello World" />)
   })
 
   it('displays the title', () => {
-    const testTitle = 'Hello World'
+    const testTitle = 'Hello World Again'
     const { getByText } = render(<Header title={testTitle} />)
     expect(getByText(testTitle)).toBeInTheDocument()
   })
 
   it('sets the page title', () => {
-    const testTitle = 'Hello World Again'
+    const testTitle = 'Hello World One Last Time'
     render(<Header title={testTitle} />)
     expect(document.title).toBe(testTitle)
   })
