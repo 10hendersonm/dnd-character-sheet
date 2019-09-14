@@ -4,7 +4,7 @@ import RightLabelBox from './RightLabelBox'
 import CheckIcon from '@material-ui/icons/Check'
 import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((/*theme*/) => ({
   emptyPlaceholder: {
     height: 24,
     width: 24,

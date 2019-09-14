@@ -1,7 +1,7 @@
 import React from 'react'
 import Attribute from './Attribute'
 import { makeStyles } from '@material-ui/styles'
-import {attributes} from 'config/dnd-constants'
+import { attributes } from 'config/dnd-constants'
 
 const useStyles = makeStyles(theme => ({
   root: {
