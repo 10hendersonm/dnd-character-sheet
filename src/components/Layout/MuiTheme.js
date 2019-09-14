@@ -18,7 +18,7 @@ const MuiTheme = ({ children }) => {
 }
 
 MuiTheme.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 }
 
 export default MuiTheme
