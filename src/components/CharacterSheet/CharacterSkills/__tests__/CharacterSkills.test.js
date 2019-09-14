@@ -33,18 +33,18 @@ describe('<CharacterSkills />', () => {
     expect(baseElement).toHaveTextContent('Saving Throws')
   })
 
-  // it('provides <Skills />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('Skills')).toBeInTheDocument()
-  // })
+  it('provides <Skills />', () => {
+    const { baseElement } = render(<CharacterSkills />)
+    expect(baseElement).toHaveTextContent('Skills')
+  })
 
-  // it('provides <PassivePerception />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('PassivePerception')).toBeInTheDocument()
-  // })
+  it('provides <PassivePerception />', () => {
+    const { getByTestId } = render(<CharacterSkills />)
+    expect(getByTestId('PassivePerception')).toBeInTheDocument()
+  })
 
-  // it('provides <OtherProficiencies />', () => {
-  //   const { getByTestId } = render(<CharacterSkills />)
-  //   expect(getByTestId('OtherProficiencies')).toBeInTheDocument()
-  // })
+  it('provides <OtherProficiencies />', () => {
+    const { baseElement } = render(<CharacterSkills />)
+    expect(baseElement).toHaveTextContent('Other Proficiencies & Languages')
+  })
 })

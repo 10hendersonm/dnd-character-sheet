@@ -9,9 +9,11 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
+    margin: theme.spacing(1),
   },
   label: {
     alignSelf: 'center',
+    textTransform: 'uppercase',
   },
   contentRoot: {
     display: 'flex',

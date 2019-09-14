@@ -1,0 +1,89 @@
+import React from 'react'
+import { render } from 'utils/test-utils'
+import '@testing-library/jest-dom/extend-expect'
+import SkillProficiency from '../SkillProficiency'
+
+describe('<SkillProficiency />', () => {
+  it('renders', () => {
+    render(
+      <SkillProficiency
+        name="Acrobatics"
+        value={3}
+        proficient
+        baseAttribute="Dexterity"
+      />
+    )
+  })
+
+  it('displays the skill name', () => {
+    const skillName = 'Knot Tying'
+    const { getByTestId } = render(<SkillProficiency name={skillName} />)
+    expect(getByTestId('SkillProficiency-Name').textContent).toBe(skillName)
+  })
+
+  it('displays unsigned skill values of 0', () => {
+    const { getByTestId } = render(<SkillProficiency value={0} />)
+    expect(getByTestId('SkillProficiency-Value')).toHaveTextContent('0')
+  })
+
+  it('displays the positive-signed skill value', () => {
+    const { getByTestId } = render(<SkillProficiency value={1} />)
+    expect(getByTestId('SkillProficiency-Value')).toHaveTextContent('+1')
+  })
+
+  it('displays the negative-signed skill value', () => {
+    const { getByTestId } = render(<SkillProficiency value={-1} />)
+    expect(getByTestId('SkillProficiency-Value')).toHaveTextContent('-1')
+  })
+
+  it('displays the truncated base attribute', () => {
+    const { getByTestId } = render(
+      <SkillProficiency baseAttribute="Dexterity" />
+    )
+    expect(getByTestId('SkillProficiency-BaseAttribute')).toHaveTextContent(
+      '(Dex)'
+    )
+  })
+
+  it('does not display the base attribute () when no base attribute is applied', () => {
+    const { queryByTestId } = render(<SkillProficiency />)
+    expect(
+      queryByTestId('SkillProficiency-BaseAttribute')
+    ).not.toBeInTheDocument()
+  })
+
+  it('displays a nonproficient icon when no proficiency is passed', () => {
+    const { getByTestId } = render(<SkillProficiency />)
+    expect(getByTestId('SkillProficiency-Unproficient')).toBeInTheDocument()
+  })
+
+  it('displays a nonproficient icon when proficiency is passed as false', () => {
+    const { getByTestId } = render(<SkillProficiency proficient={false} />)
+    expect(getByTestId('SkillProficiency-Unproficient')).toBeInTheDocument()
+  })
+
+  it('displays a nonproficient icon when proficiency is passed as 0', () => {
+    const { getByTestId } = render(<SkillProficiency proficient={0} />)
+    expect(getByTestId('SkillProficiency-Unproficient')).toBeInTheDocument()
+  })
+
+  it('displays a proficient icon when proficiency is passed as a flag', () => {
+    const { getByTestId } = render(<SkillProficiency proficient />)
+    expect(getByTestId('SkillProficiency-Proficient')).toBeInTheDocument()
+  })
+
+  it('displays a proficient icon when proficiency is passed as true', () => {
+    const { getByTestId } = render(<SkillProficiency proficient={true} />)
+    expect(getByTestId('SkillProficiency-Proficient')).toBeInTheDocument()
+  })
+
+  it('displays a proficient icon when proficiency is passed as 1', () => {
+    const { getByTestId } = render(<SkillProficiency proficient={1} />)
+    expect(getByTestId('SkillProficiency-Proficient')).toBeInTheDocument()
+  })
+
+  it('displays an expertise icon when proficiency is passed as 2', () => {
+    const { getByTestId } = render(<SkillProficiency proficient={2} />)
+    expect(getByTestId('SkillProficiency-Expert')).toBeInTheDocument()
+  })
+})

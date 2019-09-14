@@ -10,6 +10,8 @@ import Inspiration from './Inspiration'
 import ProficiencyBonus from './ProficiencyBonus'
 import SavingThrows from './SavingThrows/SavingThrows'
 import Skills from './Skills'
+import PassivePerception from './PassivePerception'
+import OtherProficiencies from './OtherProficiencies'
 
 const useStyles = makeStyles((/*theme*/) => ({
   skillsRoot: {
@@ -31,9 +33,9 @@ const CharacterSkills = () => {
           <SavingThrows />
           <Skills />
         </div>
-        {/* <PassivePerception /> */}
-        {/* <OtherProficiencies /> */}
       </div>
+      <PassivePerception wisdomModifier={0} />
+      <OtherProficiencies />
     </SheetColumn>
   )
 }

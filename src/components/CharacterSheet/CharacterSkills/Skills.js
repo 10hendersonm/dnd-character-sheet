@@ -10,8 +10,8 @@ const Skills = () => {
         <SkillProficiency
           key={`skillProficiency-${skill}`}
           name={skill}
-          value={0}
-          proficient={Math.round(Math.random() * 3)}
+          value={Math.round(Math.random() * 10) - 5}
+          proficient={Math.floor(Math.random() * 3)}
           baseAttribute={attribute}
         />
       ))}
