@@ -38,7 +38,7 @@ const BottomLabelContainer = ({ label, children }) => {
 
 BottomLabelContainer.propTypes = {
   label: PropTypes.string.isRequired,
-  children: PropTypes.object,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 }
 
 export default BottomLabelContainer

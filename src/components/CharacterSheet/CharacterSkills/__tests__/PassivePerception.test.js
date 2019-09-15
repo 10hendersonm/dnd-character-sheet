@@ -5,7 +5,7 @@ import PassivePerception from '../PassivePerception'
 
 describe('<PassivePerception />', () => {
   it('renders', () => {
-    render(<PassivePerception />)
+    render(<PassivePerception wisdomModifier={4} />)
   })
 
   it('displays passed wisdomModifier + 10', () => {

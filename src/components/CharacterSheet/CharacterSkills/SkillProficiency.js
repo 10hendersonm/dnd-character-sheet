@@ -55,6 +55,7 @@ const SkillProficiency = ({ name, value, proficient, baseAttribute }) => {
       <Typography
         className={classes.modifierValueContainer}
         data-testid="SkillProficiency-Value"
+        component="div"
       >
         <div className={classes.modifierValue}>
           <div className={classes.modifierSign}>
@@ -68,7 +69,7 @@ const SkillProficiency = ({ name, value, proficient, baseAttribute }) => {
         <Typography
           data-testid="SkillProficiency-BaseAttribute"
           variant="caption"
-          color="textDisabled"
+          color="textSecondary"
           className={classes.baseAttribute}
         >{`(${baseAttribute.substring(0, 3)})`}</Typography>
       )}
@@ -79,7 +80,7 @@ const SkillProficiency = ({ name, value, proficient, baseAttribute }) => {
 SkillProficiency.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
-  proficient: PropTypes.oneOf([PropTypes.bool, PropTypes.number]),
+  proficient: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   baseAttribute: PropTypes.string,
 }
 

@@ -7,7 +7,7 @@ const PassivePerception = ({ wisdomModifier }) => {
     <RightLabelBox
       data-testid="PassivePerception"
       label="Passive Wisdom (Perception)"
-      value={wisdomModifier + 10}
+      value={(wisdomModifier + 10).toString()}
       rounded
     />
   )

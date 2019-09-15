@@ -7,7 +7,7 @@ import { Paper } from '@material-ui/core'
 // custom
 import CharacterMetadata from './CharacterMetadata/CharacterMetadata'
 import CharacterSkills from './CharacterSkills/CharacterSkills'
-import CharacterCombat from './CharacterCombat'
+import CharacterCombat from './CharacterCombat/CharacterCombat'
 import CharacterBackground from './CharacterBackground'
 
 const useStyles = makeStyles(theme => ({
