@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 
+// custom
+import Layout from './components/Layout/Layout'
+import CharacterSheet from './components/CharacterSheet/CharacterSheet'
+
 class App extends Component {
   render() {
-    return <div className="App"></div>
+    return (
+      <Layout>
+        <CharacterSheet />
+      </Layout>
+    )
   }
 }
 
