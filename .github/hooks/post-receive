@@ -1,0 +1,27 @@
+#!/bin/sh
+image_name=dnd-character-sheet
+
+# clone new code
+work_dir="$HOME/www/$image_name"
+repo_dir="$HOME/repo/$image_name.git"
+git --work-tree=$work_dir --git-dir=$repo_dir checkout -f
+cd $work_dir
+
+### CLEANUP ###
+
+# stop docker container
+docker kill $image_name
+# remove docker container
+docker rm $image_name
+# remove docker image
+docker rmi $image_name
+
+### NEW APP ###
+
+# build docker image
+docker build . -t $image_name
+# run docker image
+# -p | {host port}:{container port} # these may be backwards
+# -d | daemonized, running as a background process
+# --name | makes it easier to clean up
+docker run -d -p 80:80 --name $image_name $image_name
