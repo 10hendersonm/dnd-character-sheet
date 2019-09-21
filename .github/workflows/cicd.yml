@@ -1,0 +1,47 @@
+name: CICD
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v1
+      - name: Set Up NodeJs
+        uses: actions/setup-node@v1
+      - name: Install Dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
+        env:
+          CI: true
+      - name: Build
+        run: npm run build
+      - name: Configure SSH
+        run: |
+          mkdir ~/.ssh
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" >> ~/.ssh/id_rsa.pub
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa*
+      - name: Enable SSH Authentication
+        run: |
+          eval `ssh-agent`
+          ssh-add ~/.ssh/id_rsa
+      - name: Configure Deployment Git Repo
+        run: |
+          git config --global user.name "github-actions-workflow"
+          rm -rf .git
+          cd build
+          git init
+          git remote add server ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER }}/home/${{ secrets.SSH_USER }}/repo/dnd-character-sheet.git
+          git add .
+          git commit -m "Deployment"
+      - name: Push Build
+        run: |
+          cd build
+          git push server master -f
