@@ -32,13 +32,13 @@ jobs:
 
       - name: Create Deployment Directory
         run: |
-          mkdir deploy
-          mv Dockerfile deploy
+          mkdir deployment
           mv build deploy/app
+          mv deploy/* deployment
 
       - name: Create Deployment Commit
         run: |
-          cd deploy
+          cd deployment
           git config --global user.name "github-actions-workflow"
           git init
           git remote add server ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER }}/home/${{ secrets.SSH_USER }}/repo/dnd-character-sheet.git
@@ -60,5 +60,5 @@ jobs:
 
       - name: Push Build
         run: |
-          cd deploy
+          cd deployment
           git push server master -f
