@@ -1,0 +1,962 @@
+[
+  {
+    "name": "Padded Armor",
+    "weight": 8,
+    "cost": 5
+  },
+  {
+    "name": "Leather Armor",
+    "weight": 10,
+    "cost": 10
+  },
+  {
+    "name": "Studded Armor",
+    "weight": 13,
+    "cost": 45
+  },
+  {
+    "name": "Hide Armor",
+    "weight": 12,
+    "cost": 10
+  },
+  {
+    "name": "Chain Shirt",
+    "weight": 20,
+    "cost": 50
+  },
+  {
+    "name": "Scale Mail",
+    "weight": 45,
+    "cost": 50
+  },
+  {
+    "name": "Breastplate",
+    "weight": 20,
+    "cost": 400
+  },
+  {
+    "name": "Half Plate Armor",
+    "weight": 40,
+    "cost": 750
+  },
+  {
+    "name": "Ring Mail",
+    "weight": 40,
+    "cost": 30
+  },
+  {
+    "name": "Chain Mail",
+    "weight": 55,
+    "cost": 75
+  },
+  {
+    "name": "Splint Armor",
+    "weight": 60,
+    "cost": 200
+  },
+  {
+    "name": "Plate Armor",
+    "weight": 65,
+    "cost": 1500
+  },
+  {
+    "name": "Shield",
+    "weight": 6,
+    "cost": 10
+  },
+  {
+    "name": "Club",
+    "weight": 2,
+    "cost": 0.1
+  },
+  {
+    "name": "Dagger",
+    "weight": 1,
+    "cost": 2
+  },
+  {
+    "name": "Greatclub",
+    "weight": 10,
+    "cost": 0.2
+  },
+  {
+    "name": "Handaxe",
+    "weight": 2,
+    "cost": 5
+  },
+  {
+    "name": "Javelin",
+    "weight": 2,
+    "cost": 0.5
+  },
+  {
+    "name": "Light Hammer",
+    "weight": 2,
+    "cost": 2
+  },
+  {
+    "name": "Mace",
+    "weight": 4,
+    "cost": 5
+  },
+  {
+    "name": "Quarterstaff",
+    "weight": 4,
+    "cost": 0.2
+  },
+  {
+    "name": "Sickle",
+    "weight": 2,
+    "cost": 1
+  },
+  {
+    "name": "Spear",
+    "weight": 3,
+    "cost": 1
+  },
+  {
+    "name": "Crossbow (Light)",
+    "weight": 5,
+    "cost": 25
+  },
+  {
+    "name": "Dart",
+    "weight": 0.25,
+    "cost": 0.05
+  },
+  {
+    "name": "Shortbow",
+    "weight": 2,
+    "cost": 25
+  },
+  {
+    "name": "Sling",
+    "weight": 0,
+    "cost": 0.1
+  },
+  {
+    "name": "Battleaxe",
+    "weight": 4,
+    "cost": 10
+  },
+  {
+    "name": "Flail",
+    "weight": 2,
+    "cost": 10
+  },
+  {
+    "name": "Glaive",
+    "weight": 6,
+    "cost": 20
+  },
+  {
+    "name": "Greataxe",
+    "weight": 7,
+    "cost": 30
+  },
+  {
+    "name": "Greatsword",
+    "weight": 6,
+    "cost": 50
+  },
+  {
+    "name": "Halberd",
+    "weight": 6,
+    "cost": 20
+  },
+  {
+    "name": "Lance",
+    "weight": 6,
+    "cost": 10
+  },
+  {
+    "name": "Longsword",
+    "weight": 3,
+    "cost": 15
+  },
+  {
+    "name": "Maul",
+    "weight": 10,
+    "cost": 10
+  },
+  {
+    "name": "Morningstar",
+    "weight": 4,
+    "cost": 15
+  },
+  {
+    "name": "Pike",
+    "weight": 18,
+    "cost": 5
+  },
+  {
+    "name": "Rapier",
+    "weight": 2,
+    "cost": 25
+  },
+  {
+    "name": "Scimitar",
+    "weight": 3,
+    "cost": 25
+  },
+  {
+    "name": "Shortsword",
+    "weight": 2,
+    "cost": 10
+  },
+  {
+    "name": "Trident",
+    "weight": 4,
+    "cost": 5
+  },
+  {
+    "name": "War Pick",
+    "weight": 2,
+    "cost": 5
+  },
+  {
+    "name": "Warhammer",
+    "weight": 2,
+    "cost": 15
+  },
+  {
+    "name": "Whip",
+    "weight": 3,
+    "cost": 2
+  },
+  {
+    "name": "Blowgun",
+    "weight": 1,
+    "cost": 10
+  },
+  {
+    "name": "Crossbow (Hand)",
+    "weight": 3,
+    "cost": 75
+  },
+  {
+    "name": "Crossbow (Heavy)",
+    "weight": 18,
+    "cost": 50
+  },
+  {
+    "name": "Longbow",
+    "weight": 2,
+    "cost": 50
+  },
+  {
+    "name": "Net",
+    "weight": 3,
+    "cost": 1
+  },
+  {
+    "name": "Abacus",
+    "cost": 2,
+    "weight": 2
+  },
+  {
+    "name": "Acid (Vial)",
+    "cost": 25,
+    "weight": 1
+  },
+  {
+    "name": "Alchemist's Fire (Flask)",
+    "cost": 50,
+    "weight": 1
+  },
+  {
+    "name": "Arrows (20)",
+    "cost": 1,
+    "weight": 1
+  },
+  {
+    "name": "Blowgun Needles (50)",
+    "cost": 1,
+    "weight": 1
+  },
+  {
+    "name": "Crossbow Bolts (20)",
+    "cost": 1,
+    "weight": 1.5
+  },
+  {
+    "name": "Sling Bullets (20)",
+    "cost": 0.04,
+    "weight": 1.5
+  },
+  {
+    "name": "Antitoxin (Vial)",
+    "cost": 50,
+    "weight": 0
+  },
+  {
+    "name": "Crystal",
+    "cost": 10,
+    "weight": 1
+  },
+  {
+    "name": "Orb",
+    "cost": 20,
+    "weight": 3
+  },
+  {
+    "name": "Rod",
+    "cost": 10,
+    "weight": 2
+  },
+  {
+    "name": "Staff",
+    "cost": 5,
+    "weight": 4
+  },
+  {
+    "name": "Wand",
+    "cost": 10,
+    "weight": 1
+  },
+  {
+    "name": "Backpack",
+    "cost": 2,
+    "weight": 5
+  },
+  {
+    "name": "Ball Bearings (Bag of 1,000)",
+    "cost": 1,
+    "weight": 2
+  },
+  {
+    "name": "Barrel",
+    "cost": 2,
+    "weight": 70
+  },
+  {
+    "name": "Basket",
+    "cost": 0.4,
+    "weight": 2
+  },
+  {
+    "name": "Bedroll",
+    "cost": 1,
+    "weight": 7
+  },
+  {
+    "name": "Bell",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Blanket",
+    "cost": 0.5,
+    "weight": 3
+  },
+  {
+    "name": "Block and Tackle",
+    "cost": 1,
+    "weight": 5
+  },
+  {
+    "name": "Book",
+    "cost": 25,
+    "weight": 5
+  },
+  {
+    "name": "Bottle (Glass)",
+    "cost": 2,
+    "weight": 2
+  },
+  {
+    "name": "Bucket",
+    "cost": 0.05,
+    "weight": 2
+  },
+  {
+    "name": "Caltrops (Bag of 20)",
+    "cost": 1,
+    "weight": 2
+  },
+  {
+    "name": "Candle",
+    "cost": 0.01,
+    "weight": 0
+  },
+  {
+    "name": "Case (Crossbow Bolt)",
+    "cost": 1,
+    "weight": 1
+  },
+  {
+    "name": "Case (Map or Scroll)",
+    "cost": 1,
+    "weight": 1
+  },
+  {
+    "name": "Chain (10 Feet)",
+    "cost": 5,
+    "weight": 10
+  },
+  {
+    "name": "Chalk (1 Piece)",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Chest",
+    "cost": 5,
+    "weight": 25
+  },
+  {
+    "name": "Climber's Kit",
+    "cost": 25,
+    "weight": 12
+  },
+  {
+    "name": "Clothes (Common)",
+    "cost": 0.5,
+    "weight": 3
+  },
+  {
+    "name": "Clothes (Costume)",
+    "cost": 5,
+    "weight": 4
+  },
+  {
+    "name": "Clothes (Fine)",
+    "cost": 15,
+    "weight": 6
+  },
+  {
+    "name": "Clothes (Traveler's)",
+    "cost": 2,
+    "weight": 4
+  },
+  {
+    "name": "Component Pouch",
+    "cost": 25,
+    "weight": 2
+  },
+  {
+    "name": "Crowbar",
+    "cost": 2,
+    "weight": 5
+  },
+  {
+    "name": "Sprig of Mistletoe",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Totem",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Wooden Staff",
+    "cost": 5,
+    "weight": 4
+  },
+  {
+    "name": "Yew Wand",
+    "cost": 10,
+    "weight": 1
+  },
+  {
+    "name": "Fishing Tackle",
+    "cost": 1,
+    "weight": 4
+  },
+  {
+    "name": "Flask or Tankard",
+    "cost": 0.02,
+    "weight": 1
+  },
+  {
+    "name": "Grappling Hook",
+    "cost": 2,
+    "weight": 4
+  },
+  {
+    "name": "Hammer",
+    "cost": 1,
+    "weight": 3
+  },
+  {
+    "name": "Hammer (Sledge)",
+    "cost": 2,
+    "weight": 10
+  },
+  {
+    "name": "Healer's Kit",
+    "cost": 5,
+    "weight": 3
+  },
+  {
+    "name": "Amulet",
+    "cost": 5,
+    "weight": 1
+  },
+  {
+    "name": "Emblem",
+    "cost": 5,
+    "weight": 0
+  },
+  {
+    "name": "Reliquary",
+    "cost": 5,
+    "weight": 2
+  },
+  {
+    "name": "Holy Water (Flask)",
+    "cost": 25,
+    "weight": 1
+  },
+  {
+    "name": "Hourglass",
+    "cost": 25,
+    "weight": 1
+  },
+  {
+    "name": "Hunting Trap",
+    "cost": 5,
+    "weight": 25
+  },
+  {
+    "name": "Ink (1 Ounce Bottle)",
+    "cost": 10,
+    "weight": 0
+  },
+  {
+    "name": "Ink Pen",
+    "cost": 0.02,
+    "weight": 0
+  },
+  {
+    "name": "Jug or Pitcher",
+    "cost": 0.02,
+    "weight": 4
+  },
+  {
+    "name": "Ladder (10-foot)",
+    "cost": 0.1,
+    "weight": 25
+  },
+  {
+    "name": "Lamp",
+    "cost": 0.5,
+    "weight": 1
+  },
+  {
+    "name": "Lantern (Bullseye)",
+    "cost": 10,
+    "weight": 2
+  },
+  {
+    "name": "Lantern (Hooded)",
+    "cost": 5,
+    "weight": 2
+  },
+  {
+    "name": "Lock",
+    "cost": 10,
+    "weight": 1
+  },
+  {
+    "name": "Magnifying Glass",
+    "cost": 100,
+    "weight": 0
+  },
+  {
+    "name": "Manacles",
+    "cost": 2,
+    "weight": 6
+  },
+  {
+    "name": "Mess Kit",
+    "cost": 2,
+    "weight": 1
+  },
+  {
+    "name": "Mirror (Steel)",
+    "cost": 5,
+    "weight": 0.5
+  },
+  {
+    "name": "Oil (Flask)",
+    "cost": 0.1,
+    "weight": 1
+  },
+  {
+    "name": "Paper (One Sheet)",
+    "cost": 0.2,
+    "weight": 0
+  },
+  {
+    "name": "Parchment (One Sheet)",
+    "cost": 0.1,
+    "weight": 0
+  },
+  {
+    "name": "Perfume (Vial)",
+    "cost": 5,
+    "weight": 0
+  },
+  {
+    "name": "Pick (Miner's)",
+    "cost": 2,
+    "weight": 10
+  },
+  {
+    "name": "Piton",
+    "cost": 0.05,
+    "weight": 0.25
+  },
+  {
+    "name": "Poison (Basic, Vial)",
+    "cost": 100,
+    "weight": 0
+  },
+  {
+    "name": "Pole (10-foot)",
+    "cost": 0.05,
+    "weight": 7
+  },
+  {
+    "name": "Pot (Iron)",
+    "cost": 2,
+    "weight": 10
+  },
+  {
+    "name": "Potion of Healing",
+    "cost": 50,
+    "weight": 0.5
+  },
+  {
+    "name": "Pouch",
+    "cost": 0.5,
+    "weight": 1
+  },
+  {
+    "name": "Quiver",
+    "cost": 1,
+    "weight": 1
+  },
+  {
+    "name": "Ram (Portable)",
+    "cost": 4,
+    "weight": 35
+  },
+  {
+    "name": "Rations (1 day)",
+    "cost": 0.5,
+    "weight": 2
+  },
+  {
+    "name": "Robes",
+    "cost": 1,
+    "weight": 4
+  },
+  {
+    "name": "Rope (Hempen, 50 feet)",
+    "cost": 1,
+    "weight": 10
+  },
+  {
+    "name": "Rope (Silk, 50 feet)",
+    "cost": 10,
+    "weight": 5
+  },
+  {
+    "name": "Sack",
+    "cost": 0.01,
+    "weight": 0.5
+  },
+  {
+    "name": "Scale (Merchant's)",
+    "cost": 5,
+    "weight": 3
+  },
+  {
+    "name": "Sealing Wax",
+    "cost": 0.5,
+    "weight": 0
+  },
+  {
+    "name": "Shovel",
+    "cost": 2,
+    "weight": 5
+  },
+  {
+    "name": "Signal Whistle",
+    "cost": 0.05,
+    "weight": 0
+  },
+  {
+    "name": "Signet Ring",
+    "cost": 5,
+    "weight": 0
+  },
+  {
+    "name": "Soap",
+    "cost": 0.02,
+    "weight": 0
+  },
+  {
+    "name": "Spellbook",
+    "cost": 50,
+    "weight": 3
+  },
+  {
+    "name": "Spikes (Iron, 10)",
+    "cost": 1,
+    "weight": 5
+  },
+  {
+    "name": "Spyglass",
+    "cost": 1000,
+    "weight": 1
+  },
+  {
+    "name": "Tent (Two-person)",
+    "cost": 2,
+    "weight": 20
+  },
+  {
+    "name": "Tinderbox",
+    "cost": 0.5,
+    "weight": 1
+  },
+  {
+    "name": "Torch",
+    "cost": 0.01,
+    "weight": 1
+  },
+  {
+    "name": "Vial",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Waterskin (Full)",
+    "cost": 0.2,
+    "weight": 5
+  },
+  {
+    "name": "Waterskin (Empty)",
+    "cost": 0.2,
+    "weight": 0.5
+  },
+  {
+    "name": "Whetstone",
+    "cost": 0.01,
+    "weight": 1
+  },
+  {
+    "name": "Alchemist's Supplies",
+    "cost": 50,
+    "weight": 8
+  },
+  {
+    "name": "Brewer's Supplies",
+    "cost": 20,
+    "weight": 9
+  },
+  {
+    "name": "Calligrapher's Supplies",
+    "cost": 10,
+    "weight": 5
+  },
+  {
+    "name": "Carpenter's Tools",
+    "cost": 8,
+    "weight": 6
+  },
+  {
+    "name": "Cartographer's Tools",
+    "cost": 15,
+    "weight": 6
+  },
+  {
+    "name": "Cobbler's Tools",
+    "cost": 5,
+    "weight": 5
+  },
+  {
+    "name": "Cook's Utensils",
+    "cost": 1,
+    "weight": 8
+  },
+  {
+    "name": "Glassblower's Tools",
+    "cost": 30,
+    "weight": 5
+  },
+  {
+    "name": "Jeweler's Tools",
+    "cost": 25,
+    "weight": 2
+  },
+  {
+    "name": "Leatherworker's Tools",
+    "cost": 5,
+    "weight": 5
+  },
+  {
+    "name": "Mason's Tools",
+    "cost": 10,
+    "weight": 8
+  },
+  {
+    "name": "Painter's Supplies",
+    "cost": 10,
+    "weight": 5
+  },
+  {
+    "name": "Potter's Tools",
+    "cost": 10,
+    "weight": 3
+  },
+  {
+    "name": "Smith's Tools",
+    "cost": 20,
+    "weight": 8
+  },
+  {
+    "name": "Tinker's Tools",
+    "cost": 50,
+    "weight": 10
+  },
+  {
+    "name": "Weaver's Tools",
+    "cost": 1,
+    "weight": 5
+  },
+  {
+    "name": "Woodcarver's Tools",
+    "cost": 1,
+    "weight": 5
+  },
+  {
+    "name": "Disguise Kit",
+    "cost": 25,
+    "weight": 3
+  },
+  {
+    "name": "Forgery Kit",
+    "cost": 15,
+    "weight": 5
+  },
+  {
+    "name": "Dice Set",
+    "cost": 0.1,
+    "weight": 0
+  },
+  {
+    "name": "Dragonchess Set",
+    "cost": 1,
+    "weight": 0.5
+  },
+  {
+    "name": "Playing Card Set",
+    "cost": 0.5,
+    "weight": 0
+  },
+  {
+    "name": "Three-Dragon Ante Set",
+    "cost": 1,
+    "weight": 0
+  },
+  {
+    "name": "Herbalism Kit",
+    "cost": 5,
+    "weight": 3
+  },
+  {
+    "name": "Bagpipes",
+    "cost": 30,
+    "weight": 6
+  },
+  {
+    "name": "Drum",
+    "cost": 6,
+    "weight": 3
+  },
+  {
+    "name": "Dulcimer",
+    "cost": 25,
+    "weight": 10
+  },
+  {
+    "name": "Flute",
+    "cost": 2,
+    "weight": 1
+  },
+  {
+    "name": "Lute",
+    "cost": 35,
+    "weight": 2
+  },
+  {
+    "name": "Lyre",
+    "cost": 30,
+    "weight": 2
+  },
+  {
+    "name": "Horn",
+    "cost": 3,
+    "weight": 2
+  },
+  {
+    "name": "Pan Flute",
+    "cost": 12,
+    "weight": 2
+  },
+  {
+    "name": "Shawm",
+    "cost": 2,
+    "weight": 1
+  },
+  {
+    "name": "Viol",
+    "cost": 30,
+    "weight": 1
+  },
+  {
+    "name": "Navigator's Tools",
+    "cost": 25,
+    "weight": 2
+  },
+  {
+    "name": "Poisoner's Kit",
+    "cost": 50,
+    "weight": 2
+  },
+  {
+    "name": "Thieves' Tools",
+    "cost": 25,
+    "weight": 1
+  },
+  {
+    "name": "Copper Coin",
+    "cost": 0.01,
+    "weight": 0.02
+  },
+  {
+    "name": "Silver Coin",
+    "cost": 0.1,
+    "weight": 0.02
+  },
+  {
+    "name": "Electrum Coin",
+    "cost": 0.5,
+    "weight": 0.02
+  },
+  {
+    "name": "Gold Coin",
+    "cost": 1,
+    "weight": 0.02
+  },
+  {
+    "name": "Platinum Coin",
+    "cost": 10,
+    "weight": 0.02
+  }
+]
