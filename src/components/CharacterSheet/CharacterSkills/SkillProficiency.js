@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+
+// material-ui
 import { makeStyles } from '@material-ui/styles'
 import {
   // RadioButtonChecked as ProficientIcon,
@@ -14,6 +16,10 @@ import {
   DoneAll as ExpertIcon,
 } from '@material-ui/icons'
 import { Typography } from '@material-ui/core'
+
+// custom
+import { AttributeContext, ProficiencyBonusContext } from './CharacterSkills'
+import { attributeToModifier } from 'utils/dndUtils'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,8 +47,16 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const SkillProficiency = ({ name, value, proficient, baseAttribute }) => {
+const SkillProficiency = ({ name, proficient, baseAttribute }) => {
   const classes = useStyles()
+  const [attributes] = useContext(AttributeContext)
+  const [proficiencyBonus] = useContext(ProficiencyBonusContext)
+  const proficiencyMultiplier =
+    typeof proficient === 'number' ? proficient : proficient ? 1 : 0
+  const value =
+    attributeToModifier(attributes[baseAttribute || name]) +
+    // attributeToModifier(3) +
+    proficiencyBonus * proficiencyMultiplier
   var icon
   if (proficient === 2) {
     icon = <ExpertIcon data-testid="SkillProficiency-Expert" />
@@ -79,7 +93,6 @@ const SkillProficiency = ({ name, value, proficient, baseAttribute }) => {
 
 SkillProficiency.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
   proficient: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   baseAttribute: PropTypes.string,
 }

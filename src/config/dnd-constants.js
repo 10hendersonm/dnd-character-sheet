@@ -1,4 +1,4 @@
-const attributeMap = {
+export const attributeMap = {
   Strength: 'Strength',
   Dexterity: 'Dexterity',
   Constitution: 'Constitution',

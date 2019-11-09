@@ -3,6 +3,33 @@ import { render } from 'utils/test-utils'
 import { getByText } from '@testing-library/dom'
 import '@testing-library/jest-dom/extend-expect'
 import CharacterAttributes from '../CharacterAttributes'
+import {
+  AttributeContext,
+  ProficiencyBonusContext,
+} from '../../CharacterSkills'
+
+const renderWithContext = (
+  component,
+  attributeContextValue = [
+    {
+      Strength: 10,
+      Dexterity: 10,
+      Constitution: 10,
+      Intelligence: 10,
+      Wisdom: 10,
+      Charisma: 10,
+    },
+    null,
+  ],
+  proficiencyBonusContextValue = [2, null]
+) =>
+  render(
+    <AttributeContext.Provider value={attributeContextValue}>
+      <ProficiencyBonusContext.Provider value={proficiencyBonusContextValue}>
+        {component}
+      </ProficiencyBonusContext.Provider>
+    </AttributeContext.Provider>
+  )
 
 const attributes = [
   'Strength',
@@ -15,34 +42,26 @@ const attributes = [
 
 describe('<CharacterAttributes />', () => {
   it('renders', () => {
-    render(<CharacterAttributes />)
+    renderWithContext(<CharacterAttributes />)
   })
 
   it('shows all attributes', () => {
-    const { getByText } = render(<CharacterAttributes />)
+    const { getByText } = renderWithContext(<CharacterAttributes />)
     attributes.forEach(attribute => {
       expect(getByText(attribute)).toBeInTheDocument()
     })
   })
 
   it('does not show any extra attributes', () => {
-    const { getAllByTestId } = render(<CharacterAttributes />)
+    const { getAllByTestId } = renderWithContext(<CharacterAttributes />)
     expect(getAllByTestId('Attribute').length).toBe(attributes.length)
   })
 
   it('orders the attributes correctly', () => {
-    const { getAllByTestId } = render(<CharacterAttributes />)
+    const { getAllByTestId } = renderWithContext(<CharacterAttributes />)
     const nodes = getAllByTestId('Attribute')
     attributes.forEach((attribute, index) => {
       expect(getByText(nodes[index], attribute)).toBeInTheDocument()
-    })
-  })
-
-  it('has a base value of 10 for all attributes', () => {
-    const { getAllByTestId } = render(<CharacterAttributes />)
-    const nodes = getAllByTestId('attribute-value')
-    nodes.forEach(node => {
-      expect(node.textContent).toBe('10')
     })
   })
 })
