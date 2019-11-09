@@ -2,22 +2,51 @@ import React from 'react'
 import { render } from 'utils/test-utils'
 import '@testing-library/jest-dom/extend-expect'
 import Attribute from '../Attribute'
+import {
+  AttributeContext,
+  ProficiencyBonusContext,
+} from '../../CharacterSkills'
+
+const renderWithContext = (
+  component,
+  attributeContextValue = [
+    {
+      Strength: 10,
+      Dexterity: 10,
+      Constitution: 10,
+      Intelligence: 10,
+      Wisdom: 10,
+      Charisma: 10,
+    },
+    null,
+  ],
+  proficiencyBonusContextValue = [2, null]
+) =>
+  render(
+    <AttributeContext.Provider value={attributeContextValue}>
+      <ProficiencyBonusContext.Provider value={proficiencyBonusContextValue}>
+        {component}
+      </ProficiencyBonusContext.Provider>
+    </AttributeContext.Provider>
+  )
 
 describe('<Attribute />', () => {
   it('renders', () => {
-    render(<Attribute name="Strength" value={10} />)
+    renderWithContext(<Attribute name="Strength" />)
   })
 
   it('shows the attribute name', () => {
     const attributeName = 'Dexterity'
-    const { getByText } = render(<Attribute name={attributeName} value={10} />)
+    const { getByText } = renderWithContext(<Attribute name={attributeName} />)
     expect(getByText(attributeName)).toBeInTheDocument()
   })
 
   it('shows the attribute value', () => {
     const attributeValue = 17
-    const { getByText } = render(
-      <Attribute name="Constitution" value={attributeValue} />
+    const attributeName = 'Constitution'
+    const { getByText } = renderWithContext(
+      <Attribute name={attributeName} />,
+      [{ [attributeName]: attributeValue }]
     )
     expect(getByText(attributeValue.toString())).toBeInTheDocument()
   })
@@ -43,11 +72,17 @@ describe('<Attribute />', () => {
       19: '+4',
       20: '+5',
     }
-    const { getByText, rerender } = render(
-      <Attribute name="Intelligence" value={10} />
+    const { getByText, rerender } = renderWithContext(
+      <Attribute name="Intelligence" />
     )
     Object.entries(attributeModifierMap).forEach(([attribute, modifier]) => {
-      rerender(<Attribute name="Intelligence" value={parseInt(attribute)} />)
+      rerender(
+        <AttributeContext.Provider value={[{ Intelligence: attribute }]}>
+          <ProficiencyBonusContext.Provider value={[2, null]}>
+            <Attribute name="Intelligence" value={parseInt(attribute)} />
+          </ProficiencyBonusContext.Provider>
+        </AttributeContext.Provider>
+      )
       expect(getByText(modifier)).toBeInTheDocument()
     })
   })

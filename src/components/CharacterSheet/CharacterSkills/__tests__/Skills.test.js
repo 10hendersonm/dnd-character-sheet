@@ -1,7 +1,17 @@
 import React from 'react'
 import { render, getByTestId } from 'utils/test-utils'
 import '@testing-library/jest-dom/extend-expect'
+import { AttributeContext, ProficiencyBonusContext } from '../CharacterSkills'
 import Skills from '../Skills'
+
+const renderWithContext = () =>
+  render(
+    <ProficiencyBonusContext.Provider value={[2, null]}>
+      <AttributeContext.Provider value={[{ Wisdom: 14 }, null]}>
+        <Skills />
+      </AttributeContext.Provider>
+    </ProficiencyBonusContext.Provider>
+  )
 
 const skills = {
   Acrobatics: 'Dex',
@@ -26,22 +36,22 @@ const skills = {
 
 describe('<Skills />', () => {
   it('renders', () => {
-    render(<Skills />)
+    renderWithContext()
   })
 
   it('displays in a <BottomLabelContainer />', () => {
-    const { getByTestId } = render(<Skills />)
+    const { getByTestId } = renderWithContext()
     expect(getByTestId('BottomLabelContainer')).toBeInTheDocument()
   })
 
   it('has the correct number of skills', () => {
-    const { getAllByTestId } = render(<Skills />)
+    const { getAllByTestId } = renderWithContext()
     const nodes = getAllByTestId('SkillProficiency')
     expect(nodes.length).toBe(Object.keys(skills).length)
   })
 
   it('has all skills with base attributes', () => {
-    const { getAllByTestId } = render(<Skills />)
+    const { getAllByTestId } = renderWithContext()
     const nodes = getAllByTestId('SkillProficiency')
     Object.entries(skills).forEach(([skillName, baseAttribute], index) => {
       const node = nodes[index]
