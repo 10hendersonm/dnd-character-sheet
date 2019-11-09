@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'stretch',
     backgroundColor: theme.palette.divider,
     borderRadius: 5,
@@ -19,7 +20,7 @@ const CharacterAttributes = () => {
   return (
     <div data-testid="CharacterAttributes" className={classes.root}>
       {attributes.map(attribute => (
-        <Attribute key={`attribute-${attribute}`} name={attribute} value={10} />
+        <Attribute key={`attribute-${attribute}`} name={attribute} />
       ))}
     </div>
   )

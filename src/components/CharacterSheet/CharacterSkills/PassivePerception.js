@@ -1,8 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import RightLabelBox from './RightLabelBox'
+import React, { useContext } from 'react'
 
-const PassivePerception = ({ wisdomModifier }) => {
+// custom
+import RightLabelBox from './RightLabelBox'
+import { AttributeContext, ProficiencyBonusContext } from './CharacterSkills'
+import { attributeMap } from 'config/dnd-constants'
+import { attributeToModifier } from 'utils/dndUtils'
+
+const PassivePerception = () => {
+  const [attributes] = useContext(AttributeContext)
+  const [proficiencyBonus] = useContext(ProficiencyBonusContext)
+  const wisdomModifier =
+    attributeToModifier(attributes[attributeMap.Wisdom]) + proficiencyBonus * 0
   return (
     <RightLabelBox
       data-testid="PassivePerception"
@@ -11,10 +19,6 @@ const PassivePerception = ({ wisdomModifier }) => {
       rounded
     />
   )
-}
-
-PassivePerception.propTypes = {
-  wisdomModifier: PropTypes.number.isRequired,
 }
 
 export default PassivePerception

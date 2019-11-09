@@ -4,14 +4,14 @@ import { attributes } from 'config/dnd-constants'
 import SkillProficiency from '../SkillProficiency'
 
 const SavingThrows = () => {
+  const isProficient = () => Math.random() > 0.75
   return (
     <BottomLabelContainer label="Saving Throws">
       {attributes.map(attribute => (
         <SkillProficiency
           key={`skillProficiency-${attribute}`}
           name={attribute}
-          value={0}
-          proficient={Math.floor(Math.random() * 3)}
+          proficient={isProficient() ? 1 : 0}
         />
       ))}
     </BottomLabelContainer>
